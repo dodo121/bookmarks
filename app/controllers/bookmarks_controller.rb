@@ -6,6 +6,7 @@ class BookmarksController < ApplicationController
   def create
     bookmark.website = Website.where(domain: bookmark.extract_domain(bookmark.url)).first_or_create
     bookmark.title = MetaInspector.new(bookmark.url).title
+    bookmark.short_url = MetaInspector.new("http://tinyurl.com/api-create.php?url=#{bookmark.url}")
     if bookmark.save
       redirect_to bookmark, notice: 'Bookmark was successfully created.'
     else

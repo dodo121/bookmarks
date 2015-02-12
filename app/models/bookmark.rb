@@ -19,9 +19,4 @@ class Bookmark < ActiveRecord::Base
     self.tags.map(&:name).join(", ")
   end
   
-  def short_url(url)
-    HTTParty.get("http://tinyurl.com/api-create.php?url=#{url}")
-  end
 end
-
-

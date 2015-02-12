@@ -10,7 +10,7 @@
   .actions
     %div.form-group
       = f.label 'Url:'
-      = f.text_field :url, class: "form-control"
+      = f.text_field :url, class: "form-control", required: true
       = f.label 'Tags (comma separated):'
-      = f.text_area :all_tags, class: "form-control", placeholder: 'comma separated', rows: "3"
+      = f.text_area :all_tags, class: "form-control", placeholder: 'comma separated', rows: "3", required: true
       = f.submit

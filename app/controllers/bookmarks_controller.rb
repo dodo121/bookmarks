@@ -21,8 +21,11 @@ class BookmarksController < ApplicationController
   end
 
   def destroy
-    bookmark.destroy
-    redirect_to bookmarks_url, notice: 'Bookmark was successfully destroyed.'
+    if bookmark.destroy
+      redirect_to bookmarks_url, notice: 'Bookmark was successfully destroyed.'
+    else
+      redirect_to bookmarks_url, notice: "You can't delete this bookmark."
+    end
   end
 
   private

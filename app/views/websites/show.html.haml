@@ -1,4 +1,24 @@
 %p#notice= notice
+%h1= website.domain
+%table
+  %thead
+    %tr
+      %th Bookmark url
+      %th Bookmark tags
+      %th Options
+      %th
+      %th
+      
+  %tbody
+    - website.bookmarks.each do |bookmark|
+      %tr
+        %td= link_to "#{bookmark.url}", bookmark.url 
+        %td= bookmark.all_tags
+        %td= link_to 'Show', bookmark
+        %td= link_to 'Edit', edit_bookmark_path(bookmark)
+        %td= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' }
+%br/
+
 = link_to 'Edit', edit_website_path(website)
 |
 \#{link_to 'Back', websites_path}

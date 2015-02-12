@@ -4,7 +4,7 @@ class Bookmark < ActiveRecord::Base
   belongs_to :website
   
   def extract_domain(url)
-    domain = URI.parse(url).host.split(".").last(2).join(".")
+    URI.parse(url).host.split(".").last(2).join(".")
   end
   
   def all_tags=(names)
@@ -15,6 +15,10 @@ class Bookmark < ActiveRecord::Base
   
   def all_tags
     self.tags.map(&:name).join(", ")
+  end
+  
+  def short_url(url)
+    HTTParty.get("http://tinyurl.com/api-create.php?url=#{url}")
   end
 end
 

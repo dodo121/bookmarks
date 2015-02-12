@@ -2,7 +2,7 @@
 
 %p
   %strong Bookmark url:
-  = link_to "#{bookmark.url}", bookmark.url 
+  = link_to "#{bookmark.short_url(bookmark.url)}", bookmark.url 
   
 %p
   %strong Tags:

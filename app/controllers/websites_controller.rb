@@ -1,6 +1,6 @@
 class WebsitesController < ApplicationController
   expose(:websites)
-  expose(:website)
+  expose(:website, attributes: :website_params)
   
   def create
     if website.save
@@ -26,6 +26,6 @@ class WebsitesController < ApplicationController
   private
   
   def website_params
-    params.require(:website).permit()
+    params.require(:website).permit(:domain)
   end
 end

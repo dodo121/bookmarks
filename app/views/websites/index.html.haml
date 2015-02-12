@@ -1,6 +1,6 @@
 %p#notice= notice
 %h1 Listing Websites
-%table
+%table.table
   %thead
     %tr
       %th Name
@@ -14,4 +14,4 @@
         %td= link_to 'Edit', edit_website_path(website)
         %td= link_to 'Destroy', website, method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to 'New Website', new_website_path
+= link_to 'New Bookmark', new_bookmark_path

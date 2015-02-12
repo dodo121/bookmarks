@@ -1,8 +1,13 @@
 %p#notice= notice
+%h1= bookmark.title
 
 %p
-  %strong Bookmark url:
+  %strong Bookmark short url:
   = link_to "#{bookmark.short_url(bookmark.url)}", bookmark.url 
+
+%p
+  %strong Bookmark full url:
+  = link_to "#{bookmark.url}", bookmark.url 
   
 %p
   %strong Tags:

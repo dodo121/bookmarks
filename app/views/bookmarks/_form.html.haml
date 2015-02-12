@@ -8,6 +8,9 @@
         - bookmark.errors.full_messages.each do |message|
           %li= message
   .actions
-    = f.text_field :url
-    = f.text_field :all_tags, placeholder: 'comma separated'
-    = f.submit
+    %div.form-group
+      = f.label 'Url:'
+      = f.text_field :url, class: "form-control"
+      = f.label 'Tags (comma separated):'
+      = f.text_area :all_tags, class: "form-control", placeholder: 'comma separated', rows: "3"
+      = f.submit

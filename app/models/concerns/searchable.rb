@@ -3,9 +3,13 @@ module Searchable
   
   module ClassMethods
     def search(search_param)
-      results = self.where(nil)
+      results = Array.new
       self.column_names.each do |field|
-        results << self.where(["#{field} LIKE ?", "%#{search_param}%"])
+        next if field == 'id' || field == 'created_at' || field == 'updated_at' || field.include?("_id")
+        objects = self.where(["#{field} LIKE ?", "%#{search_param}%"])
+        if objects.present?
+          results << objects
+        end
       end
       results
     end

@@ -25,9 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'decent_exposure'
 gem 'pg'
 gem 'haml'
-gem 'httparty'
 gem 'metainspector'
 gem 'bootstrap-sass', '~> 3.3.3'
+gem 'draper'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

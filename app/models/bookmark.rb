@@ -5,8 +5,8 @@ class Bookmark < ActiveRecord::Base
   has_many :tags, through: :taggings
   belongs_to :website
   
-  def extract_domain(url)
-    URI.parse(url).host.split(".").last(2).join(".")
+  def extracted_domain
+    URI.parse(self.url).host.split(".").last(2).join(".")
   end
   
   def all_tags=(names)

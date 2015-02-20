@@ -4,7 +4,7 @@ class BookmarksController < ApplicationController
   expose(:website)
   
   def create
-    bookmark.website = Website.where(domain: bookmark.extract_domain(bookmark.url)).first_or_create
+    bookmark.website = Website.where(domain: bookmark.extracted_domain).first_or_create
     bookmark.title = MetaInspector.new(bookmark.url).title
     bookmark.short_url = MetaInspector.new("http://tinyurl.com/api-create.php?url=#{bookmark.url}")
     if bookmark.save

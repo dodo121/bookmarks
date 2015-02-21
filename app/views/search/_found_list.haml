@@ -1,0 +1,6 @@
+%ul
+  - collection.each do |objects|
+    - objects.to_a.each do |object|
+      %li
+        = object.display
+        = link_to 'Show', object rescue ""

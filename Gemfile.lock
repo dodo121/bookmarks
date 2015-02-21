@@ -66,6 +66,8 @@ GEM
     columnize (0.9.0)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    decent_decoration (0.0.6)
+      decent_exposure (>= 2.0)
     decent_exposure (2.3.2)
     domain_name (0.5.23)
       unf (>= 0.0.5, < 1.0.0)
@@ -200,6 +202,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.3)
   byebug
   coffee-rails (~> 4.1.0)
+  decent_decoration
   decent_exposure
   draper
   haml

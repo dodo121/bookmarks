@@ -2,25 +2,12 @@
 
 - if found_bookmarks.present?
   %h3 Found in bookmarks
-  %ul
-    - found_bookmarks.each do |bookmarks|
-      - bookmarks.to_a.each do |bookmark|
-        %li
-          = bookmark.title
-          = link_to 'Show', bookmark_path(bookmark)
+  = render 'search/found_list', collection: found_bookmarks
   
 - if found_websites.present?
   %h3 Found in websites
-  %ul
-    - found_websites.each do |websites|
-      - websites.to_a.each do |website|
-        %li
-          = website.domain
-          = link_to 'Show', website_path(website)
-      
+  = render 'search/found_list', collection: found_websites
+  
 - if found_tags.present?
   %h3 Found in tags
-  %ul
-    - found_tags.each do |tags|
-      - tags.to_a.each do |tag|
-        %li= tag.name
+  = render 'search/found_list', collection: found_tags

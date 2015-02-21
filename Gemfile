@@ -27,6 +27,7 @@ gem 'pg'
 gem 'haml'
 gem 'metainspector'
 gem 'bootstrap-sass', '~> 3.3.3'
+gem 'decent_decoration'
 gem 'draper'
 
 group :development, :test do

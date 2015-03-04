@@ -1,6 +1,44 @@
 @import "bootstrap";
 
+h1 {
+	margin: 20px 0 !important;
+}
+
+.buttons {
+	margin-top: 20px
+}
+
 .actions .form-control {
 	width: 300px;
 	margin-bottom: 10px;
 }
+
+/*flash*/
+#error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+		padding: 15px;
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }
+
+#notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+ }

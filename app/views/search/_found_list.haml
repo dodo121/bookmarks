@@ -3,4 +3,4 @@
     - objects.to_a.each do |object|
       %li
         = object.display
-        = link_to 'Show', object rescue ""
+        = link_to "Show&#8594;".html_safe, object rescue ""

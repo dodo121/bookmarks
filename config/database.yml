@@ -3,8 +3,8 @@ connection: &connection
   encoding: unicode
   host:     localhost
   pool: 5
-  username: bookmark
-  password: 
+  username: dszromik
+  password: dszromik
 
 development:
   <<: *connection

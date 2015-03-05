@@ -9,5 +9,7 @@ class TagDecorator < Draper::Decorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
-
+  def show_info
+    tag.name
+  end
 end
